@@ -42,7 +42,7 @@ Date Picker | Time Picker
  The easiest way to add the Material DateTime Picker library to your project is by adding it as a dependency to your `build.gradle`
 ```groovy
 dependencies {
-    implementation 'com.wdullaer:materialdatetimepicker:4.1.2'
+     implementation 'com.github.youssefelerian:MaterialDateTimePicker:4.1.3'
 }
 ```
 
@@ -186,6 +186,11 @@ You can pass a `Calendar[]` to the `DatePickerDialog`. The values in this list a
 
 ### [DatePickerDialog] `setDisabledDays(Calendar[] days)`  
 The values in this `Calendar[]` are explicitly disabled (not selectable). This option can be used together with `setSelectableDays(Calendar[] days)`: in case there is a clash `setDisabledDays(Calendar[] days)` will take precedence over `setSelectableDays(Calendar[] days)`
+
+### [DatePickerDialog] `setWeekendDays( List<Integer> weekendDays)`  
+The values in this `List<Integer>` are explicitly disabled (not selectable).
+Sets a list of days id that are not selectable in the picker
+like `Calendar.SATURDAY`
 
 ### [DatePickerDialog] `setHighlightedDays(Calendar[] days)`  
 You can pass a `Calendar[]` of days to highlight. They will be rendered in bold. You can tweak the color of the highlighted days by overwriting `mdtp_date_picker_text_highlighted`
